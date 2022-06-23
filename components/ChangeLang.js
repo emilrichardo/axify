@@ -31,10 +31,10 @@ import { useState, useEffect, useRef } from 'react';
 
 
       return(
-          <div className="px-7 py-10 ">
+          <div>
 
             <div className='realtive'>
-              <div onClick={() => setShowDropdown(b => !b)} className={` cursor-pointer ${showDropdown ? "  border border-primary-light" : "bg-gray-dark"} peer  inline-flex justify-between   rounded items-center py-2 px-2`}>
+              <div onClick={() => setShowDropdown(b => !b)} className={` cursor-pointer ${showDropdown ? "  border border-dark" : "bg-gray-dark"} peer  inline-flex justify-between   rounded items-center py-2 px-2`}>
                 <div className='inline-flex'>
                   <svg className="lg:mr-4"  width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11.8001 0.950012C12.2501 0.950012 12.7001 0.950012 13.1501 0.950012C13.2001 0.950012 13.2501 1.00001 13.3001 1.00001C14.3001 1.05001 15.2501 1.25001 16.1501 1.60001C20.2501 3.15001 22.8001 6.10001 23.6501 10.4C23.7501 10.85 23.7501 11.35 23.8501 11.85C23.8501 12.15 23.8501 12.4 23.8501 12.7C23.8001 13.05 23.8001 13.45 23.7501 13.8C23.5501 15.25 23.1001 16.55 22.4001 17.8C22.3501 17.9 22.3501 18.05 22.3501 18.15C22.7001 19.4 23.0001 20.6 23.3501 21.8C23.5001 22.4 23.7001 23 23.8501 23.6V23.65C23.7501 23.65 23.7001 23.65 23.6001 23.6C21.9501 23.1 20.3001 22.6 18.6501 22.05C18.4501 22 18.3001 22 18.1501 22.1C16.7501 22.9 15.2501 23.45 13.6001 23.6C13.3501 23.6 13.1001 23.65 12.8501 23.7C12.5501 23.7 12.3001 23.7 12.0001 23.7C11.9501 23.7 11.8501 23.65 11.8001 23.65C9.8001 23.55 7.9501 22.9 6.2501 21.8C3.5501 20 1.9001 17.5 1.3001 14.3C1.2001 13.85 1.2001 13.45 1.1001 13C1.1001 12.55 1.1001 12.1 1.1001 11.65C1.1001 11.6 1.1501 11.5 1.1501 11.45C1.3001 9.70001 1.8001 8.00001 2.7001 6.50001C4.5001 3.55001 7.1001 1.75001 10.5001 1.10001C10.9501 1.05001 11.4001 1.00001 11.8001 0.950012ZM21.9001 21.65C21.9001 21.55 21.8501 21.5 21.8501 21.45C21.5501 20.35 21.2501 19.3 20.9501 18.2C20.8501 17.85 20.9001 17.6 21.0501 17.3C21.8001 16 22.3001 14.6 22.4501 13.1C22.6001 11.15 22.2501 9.35001 21.3501 7.65001C19.5501 4.35001 16.7001 2.55001 12.9501 2.30001C10.9501 2.15001 9.1001 2.70001 7.3501 3.70001C3.7001 5.85001 1.7501 10.2 2.6501 14.3C3.4001 17.7 5.3501 20.15 8.5501 21.55C10.6501 22.5 12.8501 22.6 15.0501 22C16.1001 21.7 17.0501 21.25 18.0001 20.65C18.1501 20.55 18.2501 20.55 18.4001 20.6C19.0001 20.8 19.6001 21 20.2001 21.15C20.7501 21.3 21.3001 21.5 21.9001 21.65Z" fill="black"/>
@@ -47,7 +47,7 @@ import { useState, useEffect, useRef } from 'react';
               {showDropdown &&
                <div className="relative">
 
-               <div ref={dropdown} className="bg-primary w-24 absolute top-2   px-2 py-2 rounded" >
+               <div ref={dropdown} className={`transition-all delay-75  ${showDropdown ? "scale-100 top-1  " : "scale-50 -top-10  "} bg-dark   absolute  px-2 py-2 rounded `} >
                  {locales.map((l, i) => {
                    return (
                      <span className='inline-block' key={i} >
