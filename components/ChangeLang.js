@@ -47,7 +47,7 @@ import { useState, useEffect, useRef } from 'react';
               {showDropdown &&
                <div className="relative">
 
-               <div ref={dropdown} className={`transition-all delay-75  ${showDropdown ? "scale-100 top-1  " : "scale-50 -top-10  "} bg-dark   absolute  px-2 py-2 rounded `} >
+               <div ref={dropdown} className={`transition-all delay-75  ${showDropdown ? "scale-100 top-0  " : "scale-50 -top-10  "} bg-dark   absolute  px-2 py-2 rounded `} >
                  {locales.map((l, i) => {
                    return (
                      <span className='inline-block' key={i} >
