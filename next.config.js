@@ -5,6 +5,7 @@ const nextConfig = {
   i18n,
   env:{
     projectName: "Axyfi",
+
   }
 }
 
